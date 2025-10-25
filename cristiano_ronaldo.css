@@ -1,0 +1,96 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #222;
+  background-color: #f9f9f9;
+  background-image: url('https://www.transparenttextures.com/patterns/white-diamond.png');
+}
+
+header {
+  background-color: #0b6623;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 3px solid gold;
+}
+
+#titulo {
+  color: gold;
+  margin: 0;
+  font-size: 2.3em;
+  text-shadow: 0 0 5px #222;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: gold;
+}
+
+.seccion {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.subtitulo {
+  color: #0b6623;
+  font-size: 1.6em;
+  margin-bottom: 10px;
+}
+
+.destacado {
+  color: #0b6623;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin: 8px 0;
+}
+
+.galeria {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.galeria img {
+  width: 230px;
+  border-radius: 10px;
+  border: 2px solid #0b6623;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px gold;
+}
+
+footer {
+  background-color: #0b6623;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  font-size: 0.9em;
+}
