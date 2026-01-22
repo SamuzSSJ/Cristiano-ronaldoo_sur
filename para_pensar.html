@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Espero me perdones 😭</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; /* 🔥 empieza arriba */
+      background: radial-gradient(circle at top, #1b1f3b, #090a1a 60%);
+      color: #ffffff;
+      overflow-y: auto; /* 🔥 permite bajar */
+      position: relative;
+      padding: 40px 0; /* 🔥 espacio arriba y abajo */
+    }
+
+    /* Estrellas animadas */
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('fotos/luces_s.jpeg');
+      opacity: 0.5;
+      animation: moveStars 60s linear infinite;
+    }
+
+    @keyframes moveStars {
+      from { background-position: 0 0; }
+      to { background-position: 10000px 5000px; }
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(6px);
+      border-radius: 24px;
+      padding: 32px 28px;
+      max-width: 720px;
+      width: 90%;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+      text-align: center;
+
+      max-height: 85vh;     /* 🔥 límite de altura */
+      overflow-y: auto;    /* 🔥 scroll interno */
+    }
+
+    .title {
+      font-size: 2.2rem;
+      margin-bottom: 16px;
+      color: #ffb3ec;
+    }
+
+    .photo {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #ffb3ec;
+      margin: 16px auto 24px;
+      display: block;
+      box-shadow: 0 0 25px rgba(255,179,236,0.6);
+    }
+
+    .message {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #f2f2f2;
+      margin-bottom: 24px;
+      white-space: pre-line; /* respeta saltos de línea */
+    }
+
+    .signature {
+      font-size: 1.2rem;
+      color: #ffb3ec;
+      margin-top: 12px;
+    }
+
+    /* Corazones flotando */
+    .heart {
+      position: absolute;
+      bottom: -20px;
+      width: 16px;
+      height: 16px;
+      background: #ff6bb5;
+      transform: rotate(45deg);
+      animation: floatUp 10s linear infinite;
+      opacity: 0.8;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: #ff6bb5;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -8px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -8px;
+      top: 0;
+    }
+
+    @keyframes floatUp {
+      from {
+        transform: translateY(0) rotate(45deg);
+        opacity: 0.8;
+      }
+      to {
+        transform: translateY(-110vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tarjeta principal -->
+  <div class="card">
+    <div class="title">Solo quiero que me perdones 😭</div>
+
+    <img
+      class="photo"
+      src="fotos/sofi.jpeg"
+      alt="Nuestra foto"
+    />
+
+    <div class="message">
+      Sofi,
+      Quiero empezar pidiéndote perdón por todo esto y por cómo te hice sentir. Nunca fue mi intención lastimarte ni hacerte pensar cosas que no son. Me duele saber que esto nos puso así, porque tú eres lo más importante para mí. Quiero explicarte algo con total honestidad: hace unos meses yo me alejé de Alejandra, pero lo único que yo quería ahora era recuperar la amistad con ella. Nada más. Es alguien que conozco desde pequeño y para mí siempre ha sido solo una amiga. Sí, en un pasado me llegó a gustar, y no lo niego, pero eso ya quedó completamente atrás. Hoy no siento nada por ella y no hay segundas intenciones de ningún tipo. Tú eres la mujer que amo, Sofía. Mi corazón es tuyo y solo tuyo. No hay nadie más en mi vida con quien quiera estar que no seas tú. Lo único que yo quería era no perder una amistad de tantos años, no hacerte sentir incómoda ni causarte problemas en nuestra relación. También quiero decirte que te prometo que no voy a ser tan cercano con ella. Yo respeto lo nuestro y te respeto a ti por encima de todo. Solo quiero volver a ser su amigo y ya, sin que eso afecte lo que tenemos tú y yo. Y de verdad quiero decirte que no quiero seguir peleando ni viviendo esta guerra fría contigo. Sinceramente esto me tiene demasiado mal y no me gusta nada sentirnos así. Yo quiero seguir contigo, Sofi, y luchar juntos por nuestro amor, porque tú eres la mujer a la que yo amo.
+      Perdóname, amor. Te amo con todo mi corazón y lo único que quiero es que estemos bien otra vez.
+    </div>
+
+    <div class="signature">Con todo mi amor, Samu❤️</div>
+  </div>
+
+  <!-- Corazones -->
+  <div class="heart" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="heart" style="left: 25%; animation-delay: 2s;"></div>
+  <div class="heart" style="left: 40%; animation-delay: 4s;"></div>
+  <div class="heart" style="left: 55%; animation-delay: 1s;"></div>
+  <div class="heart" style="left: 70%; animation-delay: 3s;"></div>
+  <div class="heart" style="left: 85%; animation-delay: 5s;"></div>
+
+</body>
+</html>
